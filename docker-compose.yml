@@ -33,7 +33,7 @@ services:
       calculator:
         condition: service_healthy
     healthcheck:
-      test: ["CMD", "wget", "-q", "-O", "/dev/null", "http://localhost/actuator/health"]
+      test: ["CMD", "wget", "-q", "-O", "/dev/null", "http://127.0.0.1/actuator/health"]
       interval: 10s
       timeout: 3s
       retries: 5
